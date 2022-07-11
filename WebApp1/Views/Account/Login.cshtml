@@ -1,0 +1,56 @@
+﻿@model WebApp1.Models.LoginModel
+
+@{
+    ViewBag.Title = "Login";
+}
+
+<h2>Login</h2>
+
+@*@using (Html.BeginForm())
+    {
+        <div>
+            UserName : @Html.TextBox("UserName")
+        </div>
+        <div>
+            Password : @Html.Password("Password")
+        </div>
+        <div>
+            <input type="submit" value="Login" />
+        </div>
+    }*@
+
+
+@*@using (Html.BeginForm())
+    {
+        <div>
+            UserName : @Html.TextBoxFor(m=>m.UserName)
+        </div>
+        <div>
+            Password : @Html.PasswordFor(m=>m.Password)
+        </div>
+        <div>
+            <input type="submit" value="Login" />
+        </div>
+    }*@
+
+
+@* Template Helper Example *@
+
+
+@using (Html.BeginForm())
+{
+    <div>
+        UserName : @Html.EditorFor(m => m.UserName)
+    </div>
+    <div>
+        Password : @Html.EditorFor(m => m.Password)
+    </div>
+    <div>
+        <input type="submit" value="Login" />
+
+        @Html.SubmitButon("Command", "Submit")
+        @Html.strSubmitButon("Command", "Submit")
+
+        @Html.Raw(@Html.strSubmitButon("Command", "Submit"))
+    </div>
+}

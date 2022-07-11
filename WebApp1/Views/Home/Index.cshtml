@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+@helper Showdata(string[] arr)
+{
+    <ul>
+        @foreach (var item in arr)
+        {
+            <li>@item</li>
+        }
+
+    </ul>
+}
+
+<h2>Newly added Courses</h2>
+@Showdata(new string[] { "Python", "AI", "ML" })
+
+<h2>Most Popular</h2>
+@Showdata(new string[] { "MVC", "Azure", "Xamerin", "AWS" })
+
